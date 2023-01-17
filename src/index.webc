@@ -1,0 +1,10 @@
+---
+layout: "home.webc"
+---
+
+<section class="article">
+  <article>
+    <h2>hullo guvna</h2>
+    <a href="/notes/morbi-ut-fringilla-nibh">my people</a>
+  </article>
+</section>

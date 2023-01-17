@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebC Example</title>
+    <link rel="stylesheet" href="/style/critical.css" />
+    <style @raw="getCss(page.url)"></style>
+  </head>
+  <body>
+    <my-header></my-header>
+    <main>
+      <section><article @raw="content"></article></section>
+    </main>
+    <my-footer></my-footer>
+    <script raw="getJs(page.url)"></script>
+  </body>
+</html>

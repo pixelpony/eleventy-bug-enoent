@@ -1,0 +1,47 @@
+<header>
+  <nav>
+    <a href="/">Derek Odegard</a>
+  </nav>
+</header>
+
+<style>
+  header {
+    padding: 0;
+    flex: 1 0 auto;
+    margin: 0 auto;
+    /* width: var(--content-width); */
+    max-width: 100%;
+    /* background: var(--body-bg-color); */
+    color: var(--body-text-color);
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    font-weight: 700;
+    text-align: center;
+    /* margin: 1rem 2rem; */
+    /* border-bottom: 1px dashed black; */
+  }
+
+  header a:visited {
+    /* color: inherit;
+    color: black;
+    color: white; */
+  }
+  header nav {
+    padding: var(--space-2xs) var(--space-s);
+    margin: 0 auto;
+    font-size: var(--step--1);
+    width: 50rem;
+    max-width: 100%;
+    width: var(--content-width);
+    max-width: 100%;
+    /* padding: 0; */
+    /* padding: 0.75rem 2rem; */
+    /* background: #000; */
+    /* color: white; */
+    /* color: white; */
+  }
+</style>
+
+<script>
+  console.log("header pitch");
+</script>

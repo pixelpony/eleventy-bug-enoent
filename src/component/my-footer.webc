@@ -1,0 +1,25 @@
+<footer>
+  <p>yeah, footer</p>
+</footer>
+
+<style>
+  footer {
+    font-size: var(--step--3);
+    flex: 0 0 auto;
+
+    /* padding: 0.5rem 1.25rem; */
+    /* background-color: black;
+    color: white; */
+    margin: var(--space-m) auto;
+    /* padding: var(--space-s); */
+    width: var(--content-width);
+    max-width: 100%;
+  }
+  footer a {
+    text-decoration: none;
+    color: inherit;
+  }
+  footer p {
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,275 @@
+@import "./_reset.css";
+@import "./_fonts.css";
+
+:root {
+  --body-bg-color: #e7e7e7;
+  --body-text-color: black;
+
+  --heading-font: "Reforma1918", serif;
+  --heading-line-height: 1.4;
+
+  --body-font: "Reforma2018", sans-serif;
+  --body-line-height: 1.4;
+
+/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+  --step--2: clamp(0.78rem, calc(0.72rem + 0.31vw), 0.96rem);
+  --step--1: clamp(0.94rem, calc(0.85rem + 0.46vw), 1.20rem);
+  --step-0: clamp(1.13rem, calc(0.99rem + 0.65vw), 1.50rem);
+  --step-1: clamp(1.35rem, calc(1.17rem + 0.91vw), 1.88rem);
+  --step-2: clamp(1.62rem, calc(1.37rem + 1.26vw), 2.34rem);
+  --step-3: clamp(1.94rem, calc(1.60rem + 1.72vw), 2.93rem);
+  --step-4: clamp(2.33rem, calc(1.87rem + 2.31vw), 3.66rem);
+  --step-5: clamp(2.80rem, calc(2.18rem + 3.09vw), 4.58rem);
+
+/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+
+  --space-3xs: clamp(0.31rem, calc(0.29rem + 0.11vw), 0.38rem);
+  --space-2xs: clamp(0.56rem, calc(0.50rem + 0.33vw), 0.75rem);
+  --space-xs: clamp(0.88rem, calc(0.79rem + 0.43vw), 1.13rem);
+  --space-s: clamp(1.13rem, calc(0.99rem + 0.65vw), 1.50rem);
+  --space-m: clamp(1.69rem, calc(1.49rem + 0.98vw), 2.25rem);
+  --space-l: clamp(2.25rem, calc(1.99rem + 1.30vw), 3.00rem);
+  --space-xl: clamp(3.38rem, calc(2.98rem + 1.96vw), 4.50rem);
+  --space-2xl: clamp(4.50rem, calc(3.98rem + 2.61vw), 6.00rem);
+  --space-3xl: clamp(6.75rem, calc(5.97rem + 3.91vw), 9.00rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.31rem, calc(0.16rem + 0.76vw), 0.75rem);
+  --space-2xs-xs: clamp(0.56rem, calc(0.37rem + 0.98vw), 1.13rem);
+  --space-xs-s: clamp(0.88rem, calc(0.66rem + 1.09vw), 1.50rem);
+  --space-s-m: clamp(1.13rem, calc(0.73rem + 1.96vw), 2.25rem);
+  --space-m-l: clamp(1.69rem, calc(1.23rem + 2.28vw), 3.00rem);
+  --space-l-xl: clamp(2.25rem, calc(1.47rem + 3.91vw), 4.50rem);
+  --space-xl-2xl: clamp(3.38rem, calc(2.46rem + 4.57vw), 6.00rem);
+  --space-2xl-3xl: clamp(4.50rem, calc(2.93rem + 7.83vw), 9.00rem);
+
+  /* Custom pairs */
+  --space-s-l: clamp(1.13rem, calc(0.47rem + 3.26vw), 3.00rem);
+
+  --content-width: 35rem;
+
+  font-family: var(--body-font);
+  font-size: var(--step-0);
+  line-height: var(--body-line-height);
+  font-weight: 300;
+  scroll-behavior: smooth;
+  background: var(--body-bg-color);
+  color: var(--body-text-color);
+}
+
+body {
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background:white;
+  background-color: rgba(255, 255, 255, .3);
+  /* padding: var(--space-s); */
+}
+main {
+  width: var(--content-width);
+  max-width: 100%;
+  margin: 0 auto;
+  /* background-color: rgba(255, 255, 255, .6); */
+  /* padding-top: var(--space-l); */
+}
+section{
+  margin: 0;
+  padding: 0;
+}
+
+article {
+  padding: var(--space-m) var(--space-m);
+  max-width: 100%;
+  height: 100%;
+  background-color: var(--body-bg-color);
+  /* margin: 0 .5rem ;
+  border-width: 1px 0; */
+}
+section.article {
+  background:white;
+  background-image: linear-gradient(45deg, #bcd979 12.50%, #9dad6f 12.50%, #9dad6f 25%, #7d6d61 25%, #7d6d61 37.50%, #5e574d 37.50%, #5e574d 50%, #bcd979 50%, #bcd979 62.50%, #9dad6f 62.50%, #9dad6f 75%, #7d6d61 75%, #7d6d61 87.50%, #5e574d 87.50%, #5e574d 100%);
+  background-size: 113.14px 113.14px;
+  border: 1px solid #333;
+  padding: 0 var(--space-s);
+}
+section.fucking-hire-me {
+    background:orange;
+    /* padding: .75rem; */
+    padding: 0;
+    /* margin: 0 0 var(--space-s); */
+    /* margin: 0 -.5rem 1.25rem; */
+}
+article {
+  /* width: var(--content-width); */
+  margin: 0 auto;
+  max-width: 100%;
+  background-color: rgba(255, 255, 255, .6);
+  background-color:white;
+
+  /* background-color: rgba(255, 255, 255, .6); */
+  /* margin-bottom: var(--space-xl); */
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  border-bottom: 3px solid #c33;
+}
+a:visited {
+  border-bottom: 3px dashed #c99;
+}
+hr {
+  margin: var(--space-l) 0;
+  display: block;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  font-family: var(--body-font);
+  line-height: var(--heading-line-height);
+}
+p {
+  margin: 0 0 var(--space-s);
+}
+h1 {
+  margin: 0 auto var(--space-s);
+  font-size: var(--step-1);
+  font-weight: 700;
+  max-width: 100%;
+  font-weight: 700;
+  font-family: var(--heading-font);
+
+  text-align: left;
+}
+blockquote {
+  font-style: italic;
+  margin: 0  0 0 3rem;
+}
+  blockquote ul {
+    margin: 0;
+    padding: 0;
+  }
+/* .site-name {
+  margin: 0;
+  width: auto;
+  font-size: var(--step--1);
+  font-weight: 700;
+  font-weight: 300;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-style: normal;
+
+  text-align: center;
+
+  font-family: "Reforma2018", serif;
+  font-family: "Reforma1918", serif;
+    color: white;
+}
+.site-name-cover a:hover {
+      border-bottom: none;
+    } */
+
+h2 {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  font-size: var(--step--2);
+}
+h3 {
+  font-weight: 700;
+  font-family: var(--heading-font);
+}
+
+
+.note-list  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+.note-list  ul li {
+    margin: 0;
+    margin-bottom: 0;
+    margin-bottom: 1.5rem;
+  }
+.note-list  ul time {
+    display: block;
+    font-style: italic;
+  }
+
+
+main:focus {
+  outline: none;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  top: get-size("400");
+  left: get-size("400");
+  z-index: 99;
+}
+
+dialog {
+  position: fixed;
+  opacity: 0.9;
+}
+
+img[align="left"] {
+  width: auto;
+  height: 16rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+#reading-progress {
+  z-index: 1;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transform: translate(-100vw, 0);
+  will-change: transform;
+  pointer-events: none;
+}
+pre {
+  max-width: 100%;
+  overflow: auto;
+}
+code {
+  font-size: var(--step--3);
+  max-width: 100%;
+  overflow: auto;
+}
+
+.drafts {
+  font-size: .8em;
+  color: #666;
+  margin-top: 4rem;
+  padding: 2rem 3rem;
+  border-top: 1px dotted #666;
+}
+.drafts h2 {
+  text-align:center;
+  font-size: 1.2em;
+  margin-bottom: 2em; 
+}

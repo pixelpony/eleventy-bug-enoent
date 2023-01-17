@@ -1,0 +1,204 @@
+.cv {
+  padding: 0;
+  background: white;
+  margin: 3rem auto;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  padding: 1em;
+  width: 50rem;
+  max-width: 95%;
+
+  @media (min-width: 35rem) {
+    padding: 2em;
+  }
+  @media (min-width: 45rem) {
+    padding: 2.5em;
+  }
+}
+
+.cv-head {
+  width: auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "key-info"
+    "elevator";
+  margin-bottom: 1rem;
+  background: transparent;
+  text-align: left;
+  .key-info {
+    grid-area: key-info;
+  }
+  .elevator {
+    grid-area: elevator;
+    font-feature-settings: lnum;
+    font-style: italic;
+    margin-top: 1rem;
+    @media (min-width: 47rem) {
+      grid-template-columns: 1fr 18rem;
+      grid-template-areas: "key-info  elevator";
+      background-color: #f4f4e1;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      font-size: var(--step--3);
+      padding: 0.5em 1em;
+      text-align: center;
+      font-style: normal;
+      margin-top: 0;
+    }
+  }
+  @media (min-width: 47rem) {
+    grid-template-columns: 1fr 18rem;
+    grid-template-areas: "key-info  elevator";
+  }
+}
+h1 {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+}
+address {
+  a {
+    color: #737171;
+    font-style: normal;
+  }
+}
+
+.job {
+  display: grid;
+  justify-items: start;
+  margin-bottom: 1em;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "timespan"
+    "header "
+    "description  ";
+
+  @media (min-width: 35rem) {
+    grid-template-columns: 1fr 4.25em;
+    grid-template-areas:
+      "header       timespan"
+      "description  description";
+  }
+  @media (min-width: 45rem) {
+    grid-template-areas:
+      "header       timespan"
+      "description  timespan";
+  }
+
+  @media print {
+    grid-template-columns: 1fr 6.5em;
+    grid-template-areas:
+      "header       timespan"
+      "description  timespan";
+  }
+
+  .job-head {
+    width: auto;
+    padding: 0;
+    margin-bottom: 0;
+    grid-area: header;
+    display: block;
+    margin: 0 0 0.15rem;
+    h2 {
+      font-weight: 500;
+      margin: 0;
+      margin-right: 0.75em;
+      padding: 0;
+      text-transform: none;
+      letter-spacing: normal;
+      display: inline-block;
+    }
+    ul.roles {
+      list-style: none;
+      margin: 0 0.75em 0 0;
+      padding: 0;
+      font-weight: 500;
+      font-style: italic;
+      display: inline-block;
+      li {
+        display: inline-block;
+        white-space: nowrap;
+        &::after {
+          content: "/";
+          display: inline-block;
+          margin: 0 0.2em 0 0.2em;
+          white-space: nowrap;
+        }
+        &:last-child {
+          &::after {
+            content: none;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .timespan {
+    grid-area: timespan;
+    color: #737171;
+    font-size: var(--step--3);
+  }
+  .description {
+    grid-area: description;
+    margin: 0;
+    p {
+      margin: 0;
+    }
+  }
+}
+@supports (font-variant-numeric: diagonal-fractions) {
+  .tmpl-cv .elevator {
+    font-feature-settings: lnum;
+    font-variant-numeric: lining-nums;
+  }
+}
+@media print {
+  .cv-intro {
+    display: none;
+  }
+  .tmpl-cv {
+    header,
+    footer {
+      display: none;
+    }
+  }
+  .cv {
+    font-size: 12px;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    padding: 1rem;
+    h1 {
+      font-size: 24px;
+    }
+    address {
+      font-size: 14px;
+      a {
+        text-decoration: none;
+      }
+    }
+    .elevator {
+      font-size: 11px;
+      padding: 15px;
+      text-align: left;
+      background: none;
+      padding: 0;
+    }
+    section.job {
+      .job-head {
+        h2 {
+          font-size: 14px;
+        }
+        ul.roles {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
