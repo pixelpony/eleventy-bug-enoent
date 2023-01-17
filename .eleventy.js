@@ -15,7 +15,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setServerPassthroughCopyBehavior("copy");
 
-  eleventyConfig.addPassthroughCopy("./src/style");
+  // eleventyConfig.addPassthroughCopy("./src/style");
   eleventyConfig.addPassthroughCopy("./src/img");
   eleventyConfig.addPassthroughCopy("./src/font");
 
